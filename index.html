@@ -129,7 +129,7 @@
                <div class="admin-mp3">
                   
                 <div class="admin-mp3-avatar">
-                    <img class="admin-mp3-avatar__img" src="https://scontent.fhph1-1.fna.fbcdn.net/v/t1.6435-9/141677020_3005096206385305_1878633055727300595_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=lgiglJH-0VsAX-DSPhX&_nc_ht=scontent.fhph1-1.fna&oh=52848f25e42653b17413e638bbba5923&oe=617F2D53" alt="">     
+                    <img class="admin-mp3-avatar__img" src="./assets/img/avtar.jpg" alt="">     
                 </div>
                 <div class="admin-mp3__name">
                     <h1>Phan Đức Mạnh</h1>
@@ -371,28 +371,48 @@
     <div id="listAudio"></div>
 </div>
 <script type="text/javascript">
-    var buttons = document.getElementsByClassName('tablinks');
-    var contents = document.getElementsByClassName('tabcontent');
-    function showContent(id){
-        for(var i=0 ;i<contents.length; i++){
-            contents[i].style.display = 'none';
+//C1
+    // var buttons = document.getElementsByClassName('tablinks');
+    // var contents = document.getElementsByClassName('tabcontent');
+    // function showContent(id){
+    //     for(var i=0 ;i<contents.length; i++){
+    //         contents[i].style.display = 'none';
+    //     }
+    //     var content =document.getElementById(id);
+    //     content.style.display = 'block';
+    // }
+    // for (var i=0 ;i<buttons.length;i++){
+    //     buttons[i].addEventListener('click',function(){
+    //         var id =this.innerHTML;
+    //         for (var i=0 ; i<buttons.length ;i++){
+    //             buttons[i].classList.remove("active1");
+    //         }
+    //         this.classList.add('active1');
+    //         showContent(id);
+    //     });
+    // }
+    // showContent('Tổng quan');
+    //C2
+    // var contents = document.getElementsByClassName('tabcontent');
+    //     function showContent(id){
+    //         for(var i=0 ;i<contents.length; i++){
+    //         contents[i].style.display = 'none';
+    //     }
+    //     var content =document.getElementById(id);
+    //     content.style.display = 'block';
+    //     }
+    // const tabs= document.querySelectorAll(".tablinks");
+    // const tabActive = document.querySelector(".tablinks.active1");
+    // tabs.forEach((tab,index) =>{
+    //     tab.onclick=function(){
+    //         var id =this.innerHTML;
+    //         document.querySelector(".tablinks.active1").classList.remove("active1");
+    //         this.classList.add("active1");
+    //         showContent(id);
+    //     }
 
-
-        }
-        var content =document.getElementById(id);
-        content.style.display = 'block';
-    }
-    for (var i=0 ;i<buttons.length;i++){
-        buttons[i].addEventListener('click',function(){
-            var id =this.innerHTML;
-            for (var i=0 ; i<buttons.length ;i++){
-                buttons[i].classList.remove("active1");
-            }
-            this.classList.add('active1');
-            showContent(id);
-        });
-    }
-    showContent('Tổng quan');
+    // })
+    // showContent('Tổng quan');
 </script>
 
 <script src="./assets/js/main.js"></script>    

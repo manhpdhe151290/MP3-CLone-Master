@@ -401,6 +401,28 @@ tabNav.forEach((tab,index) => {
             this.loadDurationSong(this.songs)
             this.scrollToActiveSong()
         },
+        handlerTab : function() {
+            var contents = document.getElementsByClassName('tabcontent');
+        function showContent(id){
+            for(var i=0 ;i<contents.length; i++){
+            contents[i].style.display = 'none';
+        }
+        var content =document.getElementById(id);
+        content.style.display = 'block';
+        }
+    const tabs= document.querySelectorAll(".tablinks");
+    const tabActive = document.querySelector(".tablinks.active1");
+    tabs.forEach((tab,index) =>{
+        tab.onclick=function(){
+            var id =this.innerHTML;
+            document.querySelector(".tablinks.active1").classList.remove("active1");
+            this.classList.add("active1");
+            showContent(id);
+        }
+
+    })
+    showContent('Tổng quan');
+        },
         start: function() {
             // gán cấu hình từ config vào ứng dụng
             this.loadconfig()
@@ -417,6 +439,7 @@ tabNav.forEach((tab,index) => {
             // render playlist
             this.render()
             this.loadDurationSong(this.songs)
+            this.handlerTab();
         }
     }
     app.start()
